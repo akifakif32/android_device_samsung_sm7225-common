@@ -46,8 +46,10 @@ PRODUCT_PACKAGES += \
     init.samsung.display.rc \
     init.samsung.rc \
     init.fingerprint.rc \
+    init.fod.rc \
     init.ramplus.rc \
     init.target.rc \
+    ipa_fws.rc \
     ueventd.qcom.rc \
     wifi_qcom.rc \
     wifi_sm7225.rc \
@@ -198,8 +200,13 @@ PRODUCT_PACKAGES += \
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Fingerprint
+ifeq ($(TARGET_HAS_UDFPS),true)
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7225
+else
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.samsung
+endif
 
 # FM
 PRODUCT_PACKAGES += \
@@ -241,6 +248,12 @@ PRODUCT_PACKAGES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+
+# LiveDisplay
+ifeq ($(TARGET_HAS_AMOLED),true)
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.samsung-qcom
+endif
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
@@ -409,6 +422,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# UDFPS
+ifeq ($(TARGET_HAS_UDFPS),true)
+$(call soong_config_set,samsung_udfps,udfps_zorder,0x20000000u)
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
+endif
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti
@@ -461,7 +480,6 @@ PRODUCT_SOONG_NAMESPACES += \
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Inherit proprietary blobs

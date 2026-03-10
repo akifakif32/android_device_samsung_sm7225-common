@@ -6,6 +6,13 @@
 enum device_variant {
     VARIANT_M236B = 0,
     VARIANT_E236B,
+    VARIANT_M236L,
+    VARIANT_M236Q,
+    VARIANT_A426B,
+    VARIANT_A426N,
+    VARIANT_A426U,
+    VARIANT_M426B,
+    VARIANT_A4260,
     VARIANT_MAX
 };
 
@@ -19,14 +26,56 @@ static const variant international_models_m23 = {
     .codename = "m23xq"
 };
 
-static const variant india_models_f23 = {
+static const variant india_models_m23 = {
     .model = "SM-E236B",
     .codename = "m23xq"
 };
 
+static const variant korea_models_m23 = {
+    .model = "SM-M236L",
+    .codename = "m23xq"
+};
+
+static const variant japan_models_m23 = {
+    .model = "SM-M236Q",
+    .codename = "m23xq"
+};
+
+static const variant international_models_a42 = {
+    .model = "SM-A426B",
+    .codename = "a42xq"
+};
+
+static const variant korea_models_a42 = {
+    .model = "SM-A426N",
+    .codename = "a42xq"
+};
+
+static const variant america_models_a42 = {
+    .model = "SM-A426U",
+    .codename = "a42xq"
+};
+
+static const variant india_models_a42 = {
+    .model = "SM-M426B",
+    .codename = "a42xq"
+};
+
+static const variant hongkong_models_a42 = {
+    .model = "SM-A4260",
+    .codename = "a42xq"
+};
+
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models_m23,
-    &india_models_f23,
+    &india_models_m23,
+    &korea_models_m23,
+    &japan_models_m23,
+    &international_models_a42,
+    &korea_models_a42,
+    &america_models_a42,
+    &india_models_a42,
+    &hongkong_models_a42,
 };
 
 #endif // INIT_SEC_H

@@ -31,6 +31,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.fod.rc",
+    src: "init.fod.rc",
+    sub_dir: "init",
+    soc_specific: true,
+}
+
+prebuilt_etc {
     name: "init.nfc.samsung.rc",
     src: "init.nfc.samsung.rc",
     sub_dir: "init",
@@ -130,6 +137,13 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.vendor.sensors.rc",
     src: "init.vendor.sensors.rc",
+    sub_dir: "init",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "ipa_fws.rc",
+    src: "ipa_fws.rc",
     sub_dir: "init",
     soc_specific: true,
 }
