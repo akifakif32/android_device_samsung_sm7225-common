@@ -184,9 +184,11 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdedrm
 
+ifneq ($(TARGET_IS_TABLET),true)
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
+endif
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -250,9 +252,11 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # LiveDisplay
+ifneq ($(TARGET_IS_TABLET),true)
 ifeq ($(TARGET_HAS_AMOLED),true)
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.samsung-qcom
+endif
 endif
 
 PRODUCT_COPY_FILES += \
@@ -326,7 +330,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -352,6 +355,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
+
+# Proximity Sensor
+ifneq ($(TARGET_IS_TABLET),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml
+endif
 
 # Power
 PRODUCT_PACKAGES += \
@@ -415,8 +424,10 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Touch features
+ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.samsung
+endif
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
