@@ -16,6 +16,11 @@ enum device_variant {
     VARIANT_T736B,
     VARIANT_T736N,
     VARIANT_T738U,
+    VARIANT_A526B,
+    VARIANT_A526U,
+    VARIANT_A526U1,
+    VARIANT_A526W,
+    VARIANT_E5260,
     VARIANT_MAX
 };
 
@@ -84,6 +89,31 @@ static const variant america_models_gts7xllite = {
     .codename = "gts7xllite"
 };
 
+static const variant international_models_a52 = {
+    .model = "SM-A526B",
+    .codename = "a52xq"
+};
+
+static const variant america_models_a52 = {
+    .model = "SM-A526U",
+    .codename = "a52xq"
+};
+
+static const variant america2_models_a52 = {
+    .model = "SM-A526U1",
+    .codename = "a52xq"
+};
+
+static const variant canada_models_a52 = {
+    .model = "SM-A526W",
+    .codename = "a52xq"
+};
+
+static const variant china_models_a52 = {
+    .model = "SM-E5260",
+    .codename = "a52xq"
+};
+
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models_m23,
     &india_models_m23,
@@ -97,6 +127,11 @@ static const variant *all_variants[VARIANT_MAX] = {
     &international_models_gts7xllite,
     &korea_models_gts7xllite,
     &america_models_gts7xllite,
+    &international_models_a52,
+    &america_models_a52,
+    &america2_models_a52,
+    &canada_models_a52,
+    &china_models_a52,
 };
 
 #endif // INIT_SEC_H
