@@ -58,13 +58,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qti.media.rc",
-    src: "init.qti.media.rc",
-    sub_dir: "init",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "init.ramplus.rc",
     src: "init.ramplus.rc",
     sub_dir: "init",
@@ -194,12 +187,6 @@ sh_binary {
 sh_binary {
     name: "init.qti.dcvs.sh",
     src: "init.qti.dcvs.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.media.sh",
-    src: "init.qti.media.sh",
     soc_specific: true,
 }
 
