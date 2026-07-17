@@ -289,6 +289,8 @@ vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib64/librmsclib1.so
+vendor/lib64/libDeviceInfoProvider.so
+vendor/lib64/libHDRVerifier_v1.camera.samsung.so
 
 # Charger
 vendor/bin/hvdcp_opti
