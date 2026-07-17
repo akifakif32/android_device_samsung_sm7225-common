@@ -89,6 +89,7 @@ vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/libprofileparamstorage.so
 vendor/lib64/libprofileparamstorage.so
+vendor/lib64/spatializer-aidl-V1-cpp.so
 
 # Audio (Soundtrigger)
 vendor/lib/libaudio_soundtrigger.so
