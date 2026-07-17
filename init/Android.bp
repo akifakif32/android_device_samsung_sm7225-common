@@ -195,9 +195,3 @@ sh_binary {
     src: "init.qti.qcv.sh",
     soc_specific: true,
 }
-
-sh_binary {
-    name: "vendor_modprobe.sh",
-    src: "vendor_modprobe.sh",
-    soc_specific: true,
-}
