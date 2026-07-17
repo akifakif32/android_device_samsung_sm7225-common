@@ -85,6 +85,10 @@ vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib/libwebrtc_audio_preprocessing.so
 vendor/lib64/libwebrtc_audio_preprocessing.so
+vendor/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib64/libprofileparamstorage.so
 
 # Audio (Soundtrigger)
 vendor/lib/libaudio_soundtrigger.so
@@ -152,6 +156,8 @@ vendor/lib64/soundfx/libvisualizer.so
 # Audio (Dolby)
 vendor/lib/soundfx/libswdap.so
 vendor/lib64/soundfx/libswdap.so
+vendor/lib/libspatializerparamstorage.so
+vendor/lib64/libspatializerparamstorage.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
