@@ -52,23 +52,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qcom.recovery.rc",
-    src: "init.qcom.recovery.rc",
-    sub_dir: "init",
-    recovery: true,
-}
-
-prebuilt_etc {
     name: "init.qcom.usb.rc",
     src: "init.qcom.usb.rc",
     sub_dir: "init/hw",
-}
-
-prebuilt_etc {
-    name: "init.qti.kernel.rc",
-    src: "init.qti.kernel.rc",
-    sub_dir: "init/hw",
-    soc_specific: true,
 }
 
 prebuilt_etc {
@@ -208,12 +194,6 @@ sh_binary {
 sh_binary {
     name: "init.qti.dcvs.sh",
     src: "init.qti.dcvs.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.sh",
-    src: "init.qti.kernel.sh",
     soc_specific: true,
 }
 
