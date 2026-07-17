@@ -52,6 +52,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     ('vendor/lib64/libdpps.so'): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    ('vendor/bin/hw/vendor.samsung.hardware.light-service',
+    'vendor/lib64/vendor.samsung.hardware.light-V1-ndk_platform.so'): blob_fixup()
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
