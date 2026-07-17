@@ -20,6 +20,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/sm7225-common',
+    'hardware/qcom/sm7250/display',
+    'hardware/qcom/sm7250/display/libdebug',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
     'hardware/samsung',
@@ -50,8 +52,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     ('vendor/lib64/libdpps.so'): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
-    ('vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
-        .sig_replace('9A 0A 00 94', '1F 20 03 D5'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

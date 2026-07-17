@@ -45,9 +45,9 @@ vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsnpe_wrapper.so
 
 # Audio
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
-vendor/lib/hw/audio.primary.lito.so
+system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
+system_ext/framework/audiosphere.jar|cfe651014a70739e4a2a41dc746fa8111f092bde
+vendor/lib/hw/audio.primary.lito.so:vendor/lib/hw/audio.primary.lito-samsung.so;FIX_SONAME
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/lib_SamsungRec_07010.so
@@ -138,7 +138,6 @@ vendor/lib64/soundfx/libmysound.so
 vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libplaybackrecorder.so
 vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libqcreverb.so
@@ -289,6 +288,7 @@ vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
+vendor/lib64/librmsclib1.so
 
 # Charger
 vendor/bin/hvdcp_opti
@@ -464,8 +464,8 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
 
 # FM
-system_ext/lib64/fm_helium.so
-system_ext/lib64/libfm-hci.so
+system_ext/lib64/fm_helium.so|63a119fb67a51136d738c0fa2b65c6713b3ab077
+system_ext/lib64/libfm-hci.so|96d572c590a04044f0db89356342e64ead887bc4
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -665,8 +665,8 @@ vendor/lib64/libperipheral_client.so
 vendor/etc/public.libraries.txt
 
 # QMI
-system/etc/permissions/privapp-permissions-qti.xml
-system/etc/sysconfig/qti_whitelist.xml
+system/etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
+system/etc/sysconfig/qti_whitelist.xml|73c0f9f2c0fc08291374b01c503d24cc103a32ce
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
 vendor/bin/qrtr-cfg
@@ -724,7 +724,7 @@ vendor/bin/vendor.qti.qspmhal@1.0-service|ac1c898683786dba373e76d63e31b62e138c16
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
 vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
 vendor/lib/vendor.qti.qspmhal@1.0.so|33b6800d6db7051702cee84e6213c52f7bf13c60
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|8d50ec5d16178c2ee33bf0a78fcf7a5614b359d2
 vendor/lib64/vendor.qti.qspmhal@1.0.so|4e066123b18a07bbeea6f47fcf1feecc8435141a
 
 # QTEE
@@ -737,8 +737,8 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # RIL
-product/etc/permissions/UimService.xml
-product/framework/uimservicelibrary.jar
+product/etc/permissions/UimService.xml|cb32679d345f98d5b8ec175c5c3429a2e3718882
+product/framework/uimservicelibrary.jar|f96553f87efa437cd31c508810e7fe1e168284cf
 vendor/bin/hw/rild
 vendor/bin/adpl
 vendor/bin/ipacm-diag
