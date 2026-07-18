@@ -21,7 +21,6 @@ from extract_utils.main import (
 namespace_imports = [
     'device/samsung/sm7225-common',
     'hardware/qcom/sm7250/display',
-    'hardware/qcom/sm7250/display/libdebug',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
     'hardware/samsung',
