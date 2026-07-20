@@ -148,6 +148,13 @@ prebuilt_etc {
     soc_specific: true,
 }
 
+prebuilt_etc {
+    name: "init.debug.rc",
+    src: "init.debug.rc",
+    sub_dir: "init",
+    soc_specific: true,
+}
+
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",

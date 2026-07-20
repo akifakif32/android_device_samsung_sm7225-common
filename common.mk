@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
     vendor.samsung.rilchip.qcom.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
-    init.vendor.sysfw.rc
+    init.vendor.sysfw.rc \
+    init.debug.rc
 
 # Init Files (Vendor)
 PRODUCT_PACKAGES += \
