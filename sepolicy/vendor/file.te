@@ -12,6 +12,10 @@ type biometrics_vendor_data_file, file_type, data_file_type;
 type conn_vendor_data_file, file_type, data_file_type;
 type radio_vendor_data_file, file_type, data_file_type;
 type keymaster_vendor_data_file, file_type, data_file_type;
+type gnss_vendor_data_file, file_type, data_file_type;
+
+# Fingerprint
+type vendor_fingerprint_prop, property_type, vendor_property_type;
 
 # EFS types
 type app_efs_file, file_type;
@@ -32,6 +36,9 @@ type sec_efs_file, file_type;
 type ssm_efs_file, file_type;
 type taas_efs_file, file_type;
 type gatekeeper_efs_file, file_type;
+type prov_efs_file, file_type;
+type dak_efs_file, file_type;
+type wifi_efs_file, file_type;
 
 # Fastcharge
 type sysfs_sec_fastcharge, fs_type, sysfs_type;
@@ -68,7 +75,6 @@ type sysfs_sec_switch, sysfs_type, r_fs_type, fs_type;
 type sysfs_sec_touchscreen, sysfs_type, r_fs_type, fs_type;
 type sysfs_sensors, sysfs_type, r_fs_type, fs_type;
 type sysfs_wifi, sysfs_type, r_fs_type, fs_type;
-type sysfs_oem_memory, fs_type, sysfs_type;
 type sysfs_audio_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_backlight_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_camera_writable, sysfs_type, r_fs_type, fs_type;
